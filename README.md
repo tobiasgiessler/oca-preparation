@@ -16,4 +16,14 @@ Some examples and documents to prepare for OCA certification.
 1. Instance variable declarations and instance initializers in the order they appear in the file
 1. The constructor
 
-Target 216
+## Naming conventions for Java Beans
+- Proterties are private
+- Getter methods begin with is if the property is a boolean
+- Getter methods begin with get if the property is not a boolean
+- Setter methods begin with set
+- The method name must have a prefix of set/get/is followed by the property name written in camel case
+
+## Lambdas
+- The removeIf() method on ArrayList takes a Predicate
+
+Bookmark 216 "Exam Essentials"
