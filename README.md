@@ -26,4 +26,4 @@ Some examples and documents to prepare for OCA certification.
 ## Lambdas
 - The removeIf() method on ArrayList takes a Predicate
 
-Bookmark 216 "Exam Essentials"
+Bookmark 235 "Extending a Class"
