@@ -1,0 +1,26 @@
+- the package java.lang.* is imported automatically
+
+
+import java.nio.*;              // NO GOOD – a wildcard only matches
+                                //class names, not "file.*Files"
+import java.nio.*.*;            // NO GOOD – you can only have one wildcard
+                                //and it must be at the end
+import java.nio.files.Paths.*;  // NO GOOD – you cannot import methods
+                                //only class names
+
+- implicitly imported class names take precedence of classes imported via wild card
+import java.util.Date;
+import java.sql.*;
+
+Order of Initialization
+
+- Fields and instance initializer blocks are run in the order in which they appear
+- The constructor is run afterwards
+
+Page 20
+"You can’t refer to a variable before it has
+been initialized:
+{ System.out.println(name); } // DOES NOT COMPILE
+private String name = "Fluffy";"
+
+Should be "You can't refer to a variable before it has been declared:".
