@@ -41,10 +41,46 @@ Some examples and documents to prepare for OCA certification.
 1. The method in the child class may not throw a checked exception that is new or broader than the class of any exception thrown in the parent class method.
 1. If the method returns a value, it must be the same or a subclass of the method in the parent class, known as covariant return types.
 
+## Abstract Class Definition Rules
+1. Abstract classes cannot be instantiated directly.
+1. Abstract classes may be defined with any number, including zero, of abstract and nonabstract methods.
+1. Abstract classes may not be marked as private or final.
+1. An abstract class that extends another abstract class inherits all of its abstract methods as its own abstract methods.
+1. The first concrete class that extends an abstract class must provide an implementation for all of the inherited abstract methods.
+
+## Abstract Method Definition Rules
+1. Abstract methods may only be defined in abstract classes.
+1. Abstract methods may not be declared private or final.
+1. Abstract methods must not provide a method body/implementation in the abstract class for which is it declared.
+1. Implementing an abstract method in a subclass follows the same rules for overriding a method. For example, the name and signature must be the same, and the visibility of the method in the subclass must be at least as accessible as the method in the parent class.
+
+## Interface Definition Rules
+1. Interfaces cannot be instantiated directly.
+1. An interface is not required to have any methods.
+1. An interface may not be marked as final.
+1. All top-level interfaces are assumed to have public or default access. Therefore, marking an interface as private, protected, or final will trigger a compiler error, since this is incompatible with these assumptions.
+1. All nondefault methods in an interface are assumed to have the modifiers abstract and public in their definition. Therefore, marking a method as private, protected, or final will trigger compiler errors as these are incompatible with the abstract and public keywords.
+
 ## Issues
 __P. 237__ "The default package private modifi er, which is the lack of any access modifi er,
 indicates the class can be accessed only by a subclass or class within the same package."
 
 Looks like the class itself is only available in the same package. See code example _chapter5/class-access-modifiers_
 
-Bookmark 254 "Overriding vs. Hiding Methods"
+__P. 262__ "When working with abstract classes, it is important to remember that by themselves, they cannot be instantiated and therefore do not do much other than define static variables and methods."
+
+Abstract classes can also contain instance variables. See code example _chapter5/abstract-classes_. Interfaces on the other hand can only contain static and final attributes and methods.
+
+__P. 263__ "The key point is that the first class to extend the ___nonabstract___ class must implement all inherited abstract methods."
+
+This seems to be incorrect. It should rather say: "The key point is that the first ___nonabstract___ class to extend the ___abstract___ class must implement all inherited abstract methods."
+
+__P. 267__ "All top-level interfaces are assumed to have public or default access, and they must include the abstract modifier in their definition."
+
+Since the _abstract_ keyword is assumed by the compiler, it must not be included in the definition. See code example _chapter5/implementing-interfaces_.
+
+## Open Questions
+
+An interface can extend multiple interfaces. In combination with default methods the diamond problem could arise. Is this really true?
+
+Bookmark 273 "Interface variables"
