@@ -61,6 +61,16 @@ Some examples and documents to prepare for OCA certification.
 1. All top-level interfaces are assumed to have public or default access. Therefore, marking an interface as private, protected, or final will trigger a compiler error, since this is incompatible with these assumptions.
 1. All nondefault methods in an interface are assumed to have the modifiers abstract and public in their definition. Therefore, marking a method as private, protected, or final will trigger compiler errors as these are incompatible with the abstract and public keywords.
 
+## Default Method Definition Rules
+1. A default method may only be declared within an interface and not within a class or abstract class.
+1. A default method must be marked with the default keyword. If a method is marked as default, it must provide a method body.
+1. A default method is not assumed to be static, final, or abstract, as it may be used or overridden by a class that implements the interface.
+1. Like all methods in an interface, a default method is assumed to be public and will not compile if marked as private or protected.
+
+## Static Interface Method Rules
+1. Like all methods in an interface, a static method is assumed to be public and will not compile if marked as private or protected.
+1. To reference the static method, a reference to the name of the interface must be used.
+
 ## Issues
 __P. 237__ "The default package private modifi er, which is the lack of any access modifi er,
 indicates the class can be accessed only by a subclass or class within the same package."
@@ -81,6 +91,15 @@ Since the _abstract_ keyword is assumed by the compiler, it must not be included
 
 ## Open Questions
 
-An interface can extend multiple interfaces. In combination with default methods the diamond problem could arise. Is this really true?
+#### An interface can extend multiple interfaces. In combination with default methods the diamond problem could arise. Is this really true?
 
-Bookmark 273 "Interface variables"
+If the diamond problem occurs the compiler will throw an error and the code will not compile. To circument the problem the class or interface can provide an own implementation of the method in question. This way the programmer clearly defined which implementation to use, and the diamond problem no longer exists. See code example _chapter5/diamond-problem_.
+
+#### Are variables allowed to be abstract?
+
+#### How to override default methods in interfaces? Is the default keyword needed a second time?
+
+In an interface all methods that have a method body must use the keyword default. If a method of a parent interface has to be overridden, it has to be marked as a default implementation again.
+
+Bookmark 282 "Casting Objects"
+Target 291
