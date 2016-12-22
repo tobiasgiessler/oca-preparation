@@ -89,6 +89,10 @@ __P. 267__ "All top-level interfaces are assumed to have public or default acces
 
 Since the _abstract_ keyword is assumed by the compiler, it must not be included in the definition. See code example _chapter5/implementing-interfaces_.
 
+__P. 282__ "The compiler will not allow casts to unrelated types."
+
+This doesn't seem to work all the time. The compiler seems to be able to detect if two classes are unrelated. But if an interface is used as the type of an object, the compiler is unable to detect that a class and an interface are not related to each other. See code example _chapter5/casting-objects_.
+
 ## Open Questions
 
 #### An interface can extend multiple interfaces. In combination with default methods the diamond problem could arise. Is this really true?
@@ -101,5 +105,4 @@ If the diamond problem occurs the compiler will throw an error and the code will
 
 In an interface all methods that have a method body must use the keyword default. If a method of a parent interface has to be overridden, it has to be marked as a default implementation again.
 
-Bookmark 282 "Casting Objects"
-Target 291
+Bookmark 291 "Review Questions"
