@@ -105,4 +105,8 @@ If the diamond problem occurs the compiler will throw an error and the code will
 
 In an interface all methods that have a method body must use the keyword default. If a method of a parent interface has to be overridden, it has to be marked as a default implementation again.
 
-Bookmark 291 "Review Questions"
+#### The interface definition rules state: All nondefault methods in an interface are assumed to have the modifiers abstract and public in their definition. What about static interface methods?
+
+#### (Apparently not important for OCA) What is a try-with-resources statement?
+
+Bookmark 309 "Catching Various Types of Exceptions"
