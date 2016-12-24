@@ -93,6 +93,10 @@ __P. 282__ "The compiler will not allow casts to unrelated types."
 
 This doesn't seem to work all the time. The compiler seems to be able to detect if two classes are unrelated. But if an interface is used as the type of an object, the compiler is unable to detect that a class and an interface are not related to each other. See code example _chapter5/casting-objects_.
 
+__P. 313__ "This is why you often see another try/catch inside a finally block—to make sure it doesn’t mask the exception from the catch block."
+
+How does this look like?
+
 ## Open Questions
 
 #### An interface can extend multiple interfaces. In combination with default methods the diamond problem could arise. Is this really true?
@@ -109,4 +113,5 @@ In an interface all methods that have a method body must use the keyword default
 
 #### (Apparently not important for OCA) What is a try-with-resources statement?
 
-Bookmark 309 "Catching Various Types of Exceptions"
+Bookmark 319 "Calling Methods That Throw Exceptions"
+Target 327
