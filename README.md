@@ -71,6 +71,34 @@ Some examples and documents to prepare for OCA certification.
 1. Like all methods in an interface, a static method is assumed to be public and will not compile if marked as private or protected.
 1. To reference the static method, a reference to the name of the interface must be used.
 
+## Exceptions
+If both the _catch_ and the _finally_ block throw an exception, the one from the _finally_ block gets thrown.
+
+When a method overrides a method in a superclass or interface, it is not allowed to add checked exceptions. It is allowed to declare fewer exceptions or declare a subclass of a declared exception. Methods declare exceptions with the keyword throws.
+
+### Common Runtime Exceptions
+All subclasses of java.lang.RuntimeException. I.e:
+
+- ArithmeticException
+- ArrayIndexOutOfBoundsException
+- ClassCastException
+- IllegalArgumentException
+- NullPointerException
+- NumberFormatException
+
+## Common Checked Exceptions
+Subclasses of java.lang.Exception, but not java.lang.RuntimeException. I.e:
+
+- IOException
+- FileNotFoundException
+
+## Common Errors
+Subclasses of java.lang.Error. I.e:
+
+- ExceptionInInitializerError
+- StackOverflowError
+- NoClassDefFoundError
+
 ## Issues
 __P. 237__ "The default package private modifi er, which is the lack of any access modifi er,
 indicates the class can be accessed only by a subclass or class within the same package."
@@ -113,5 +141,5 @@ In an interface all methods that have a method body must use the keyword default
 
 #### (Apparently not important for OCA) What is a try-with-resources statement?
 
-Bookmark 319 "Calling Methods That Throw Exceptions"
+Bookmark 325 "Review Questions"
 Target 327
