@@ -141,5 +141,5 @@ In an interface all methods that have a method body must use the keyword default
 
 #### (Apparently not important for OCA) What is a try-with-resources statement?
 
-Bookmark 325 "Review Questions"
-Target 327
+Bookmark 353 "Appendix B Study Tips"
+Target 366 + 388
