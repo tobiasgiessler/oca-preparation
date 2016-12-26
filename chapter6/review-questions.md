@@ -10,4 +10,10 @@ Q7: C
 __Q8__: E => The order of catch blocks is important. Since ArithmeticException is a child of RuntimeException, the second catch block is unreachable code. This causes the compiler error.  
 Q9: B  
 Q10: E  
-Q11: A
+Q11: A  
+Q12: A,B,D,G  
+Q13: A,B,C,E  
+__Q14__: A,C,D,E => Runtime exceptions can be thrown in any method, no matter what is declared in the _throws_ clause. Learn which exceptions are runtime exceptions!  
+Q15: A,B,D,E  
+Q16: B  
+__Q17__: A,C,D,E => The overridden method is just not allowed to throw more general or different checked exceptions. Additional unchecked exceptions or no exceptions at all are allowed.
