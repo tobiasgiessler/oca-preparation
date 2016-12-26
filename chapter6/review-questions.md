@@ -16,4 +16,7 @@ Q13: A,B,C,E
 __Q14__: A,C,D,E => Runtime exceptions can be thrown in any method, no matter what is declared in the _throws_ clause. Learn which exceptions are runtime exceptions!  
 Q15: A,B,D,E  
 Q16: B  
-__Q17__: A,C,D,E => The overridden method is just not allowed to throw more general or different checked exceptions. Additional unchecked exceptions or no exceptions at all are allowed.
+__Q17__: A,C,D,E => The overridden method is just not allowed to throw more general or different checked exceptions. Additional unchecked exceptions or no exceptions at all are allowed.  
+Q18: A,B,C,E  
+__Q19__: C,E => The Java compiler checks if a checked exception from a catch block can be thrown in the try block. If no function, called in the try block, declares the corresponding checked exception to be thrown, the compilers realises that the catch block represent unreachable code.  
+Q20: A,E
