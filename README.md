@@ -17,7 +17,7 @@ Some examples and documents to prepare for OCA certification.
 1. The constructor
 
 ## Naming conventions for Java Beans
-- Proterties are private
+- Properties are private
 - Getter methods begin with is if the property is a boolean
 - Getter methods begin with get if the property is not a boolean
 - Setter methods begin with set
@@ -129,7 +129,7 @@ How does this look like?
 
 #### An interface can extend multiple interfaces. In combination with default methods the diamond problem could arise. Is this really true?
 
-If the diamond problem occurs the compiler will throw an error and the code will not compile. To circument the problem the class or interface can provide an own implementation of the method in question. This way the programmer clearly defined which implementation to use, and the diamond problem no longer exists. See code example _chapter5/diamond-problem_.
+If the diamond problem occurs the compiler will throw an error and the code will not compile. To circumvent the problem the class or interface can provide an own implementation of the method in question. This way the programmer clearly defined which implementation to use, and the diamond problem no longer exists. See code example _chapter5/diamond-problem_.
 
 #### Are variables allowed to be abstract?
 
