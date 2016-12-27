@@ -1,6 +1,46 @@
 # oca-preparation
 Some examples and documents to prepare for OCA certification.
 
+# Chapter 1
+
+## Valid Identifiers
+
+Identifiers may contain letters, numbers, $, or \_. Identifiers may not begin with numbers.
+
+## Order of Elements in a Class
+
+| Element             | Example             | Required       | Where does it go?             |
+| :-------------      | :-------------      | :------------- | :-------------                |
+| Package declaration | package abc;        | No             | First line in file            |
+| Import statements   | import java.util.*; | No             | Immediately after the package |
+| Class declaration   | public class C      | Yes            | Immediately after the import  |
+| Field declarations  | int value;          | No             | Anywhere inside a class       |
+| Method declarations | void method()       | No             | Anywhere inside a class       |
+
+Think of the acronym PIC (picture): Package, import, and class.
+
+## finalize()
+
+- Any class can implement a finalize method to do cleanup work
+- Method is called when an object is collected by the garbage collector
+- Method is called 0 or 1 time
+
+## Benefits of Java
+
+__Object Oriented__ Java is an object-oriented language. It allows for functional programming within a class, but object oriented is still the main organization of code.
+
+__Encapsulation__ Java supports access modifiers to protect data from unintended access and modification.
+
+__Platform Independent__ Java is an interpreted language because it gets compiled to bytecode. This bytecode is than interpreted by the JVM. ("Write once, run everywhere") This has some limitations but if you get asked on the OCA exam, the same \*.class file runs everywhere.
+
+__Robust__ One of the major advantages of Java over C++ is that it prevents memory leaks. Java manages memory on its own and does garbage collection automatically.
+
+__Simple__ Java was intended to be simpler than C++. Java does not contain
+- Pointers
+- Operator overloading
+
+__Secure__ Java code runs inside the JVM. This creates a sandbox that makes it hard for Java code to do evil things to the computer it is running on.
+
 # Chapter 4
 
 ## Default Constructor
