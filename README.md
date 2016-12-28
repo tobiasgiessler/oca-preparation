@@ -41,6 +41,54 @@ __Simple__ Java was intended to be simpler than C++. Java does not contain
 
 __Secure__ Java code runs inside the JVM. This creates a sandbox that makes it hard for Java code to do evil things to the computer it is running on.
 
+# Chapter 2
+
+## Numeric Promotion Rules
+
+1. If two values have different data types, Java will automatically promote one of the values to the larger of the two data types.
+1. If one of the values is integral and the other is floating point, Java will automatically promote the integral value to the floating-point value's data type.
+1. Smaller data types, namely byte, short, and char, are first promoted to int any time they're used with a Java binary arithmetic operator, even if neither of the operands is int.
+1. After all promotion has occured and the operands have the same type, the resulting int value will have the same data type as its promoted operands.
+
+## If Statement
+
+In an if-else-if statement only the first successful condition is executed.
+
+## Switch Statement
+
+Data types supported by switch statements include the following
+- int and Integer
+- byte and Byte
+- short and Short
+- char and Character
+- String
+- enum values
+
+Note that boolean and long, and their associated wrapper classes, are not supported by switch statements.
+
+## For Statement
+
+Note the fact that the components of the for loop are each optional. The semicolons separating the tree sections are required though.
+
+```Java
+// an infinite loop
+for ( ; ; ) {
+  System.out.println("Hello World");
+}
+```
+
+## Labels
+
+|                | Allows optional labels | Allows break statement | Allows continue statement |
+| :------------- | :-------------         | :-------------         | :-------------            |
+| if             | Yes*                   | No                     | No                        |
+| while          | Yes                    | Yes                    | Yes                       |
+| do while       | Yes                    | Yes                    | Yes                       |
+| for            | Yes                    | Yes                    | Yes                       |
+| switch         | Yes                    | Yes                    | No                        |
+
+\* Labels are allowed for any block statement, including those that are preceded with an if-then statement.
+
 # Chapter 4
 
 ## Default Constructor
