@@ -89,6 +89,41 @@ for ( ; ; ) {
 
 \* Labels are allowed for any block statement, including those that are preceded with an if-then statement.
 
+# Chapter 3
+
+## Rules For Using The '+' Operator
+
+1. If both operands are numeric, use addition!
+1. If either operand is a String, use concatenation!
+1. Evaluate from left to right.
+
+## Class String
+
+## Class StringBuilder
+
+### delete(int start, int end)
+
+- End index is always excluded
+
+## StringBuilder vs. StringBuffer
+
+- Use StringBuilder in new code
+- StringBuilder is faster
+- StringBuffer is thread safe
+
+## Equality of strings
+
+- Only if Strings are equal at compile time, they share the same object in the string pool
+- Never use == to compare objects
+- Implementation of equals method can contain unexpected behaviour
+  - StringBuilder.equals checks references for equality
+
+## Arrays
+
+- Array.equals tests only for reference equality
+
+###
+
 # Chapter 4
 
 ## Default Constructor
@@ -228,6 +263,8 @@ In an interface all methods that have a method body must use the keyword default
 #### The interface definition rules state: All nondefault methods in an interface are assumed to have the modifiers abstract and public in their definition. What about static interface methods?
 
 #### (Apparently not important for OCA) What is a try-with-resources statement?
+
+#### Do switch statements work with all strings?
 
 ## To Do
 - Review questions chapter 1 to 4
