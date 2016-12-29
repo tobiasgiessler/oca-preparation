@@ -120,9 +120,69 @@ for ( ; ; ) {
 
 ## Arrays
 
-- Array.equals tests only for reference equality
+- The dimension of an array is determined by the number of array dimensions on the variable name + the number of array dimensions on the type
 
-###
+### Arrays.equals()
+- Tests only for reference equality
+
+### Arrays.binarySearch()
+
+Java provides a convenient way to search in arrays, but only if the array is already sorted.
+
+Search is called binary search, because array is split in two halfs to determine in which half the searched element is located. This process is repeated until only the searched element remains. (This is also the reason why binary search works only on sorted arrays.)
+
+<table>
+  <tr>
+    <th>Scenario</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>Target element found in sorted array</td>
+    <td>Index of match</td>
+  </tr>
+  <tr>
+    <td>Target element not found in sorted array</td>
+    <td>Negative value showing one smaller than the negative of index, where a match needs to be inserted to preserve sorted order</td>
+  </tr>
+  <tr>
+    <td>Unsorted array</td>
+    <td>A surprise - this result isn't predictable</td>
+  </tr>
+</table>
+
+### Arrays.asList()
+
+P.137 Converting Between Array and List
+
+- Method creates a list object based on provided array
+- Created list shares the data structure with the original array
+- Therefore method creates a fixed sized list
+  - Methods that change the size of the list throw an UnsupportedOperationException
+  - I.e. add(), remove()
+- This behaviour applies also to the varargs notation
+  - Arrays.asList("one", "two", "three")
+
+## Creating Dates and Times
+
+- The following classes are provided to create dates and times
+  - LocalDate
+  - LocalTime
+  - LocalDateTime
+- Instances of these classes are immutable
+- These classes provide static factory methods to create objects
+  - now()
+  - of()
+- No public constructors are provided
+- Calling a private constructor results in a compilation error
+  - Watch out for `new Local...()` on the exam
+
+---
+
+- The old way of creating and handling dates in Java was using the
+  - __Date__ and
+  - __Calender__ class
+- Bear in mind that months were indexed starting with 0
+- When using the __Local__\* classes and the __Month__ enumeration, months are indexed starting with 1
 
 # Chapter 4
 
