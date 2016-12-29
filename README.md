@@ -209,6 +209,10 @@ P.137 Converting Between Array and List
 ## Lambdas
 - The removeIf() method on ArrayList takes a Predicate
 
+## Static Methods
+
+Static methods can be called directly on the class. They can also be called on object references. Java uses the corresponding class object for the method call. This is the reason why you can even call static method on null references if they have the correct type.
+
 # Chapter 5
 
 ## Constructor Definition Rules:
