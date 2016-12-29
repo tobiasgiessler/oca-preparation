@@ -24,6 +24,8 @@ Think of the acronym PIC (picture): Package, import, and class.
 - Any class can implement a finalize method to do cleanup work
 - Method is called when an object is collected by the garbage collector
 - Method is called 0 or 1 time
+- Calling System.gc() suggests that Java might wish to run the garbage collector
+- Java is free to ignore the request
 
 ## Benefits of Java
 
