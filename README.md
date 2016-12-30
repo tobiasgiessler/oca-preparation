@@ -336,3 +336,5 @@ In an interface all methods that have a method body must use the keyword default
 - Review questions chapter 1 to 4
 - Insert hand written notes into README file
 - Revisit failed questions
+
+loparco-syntax
