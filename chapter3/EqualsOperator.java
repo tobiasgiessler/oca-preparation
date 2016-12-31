@@ -12,5 +12,6 @@ public class EqualsOperator {
     System.out.println(new Integer(5) == s);
     System.out.println(5 == 5.0);
     // System.out.println(new Integer(5) == new Double(5.0)); // DOES NOT COMPILE: INCOPATIBLE TYPES
+    // System.out.println(false == 0); // DOES NOT COMPILE: INCOPATIBLE TYPES
   }
 }
