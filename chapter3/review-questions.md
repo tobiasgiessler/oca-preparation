@@ -18,4 +18,11 @@ __Q15__: C,E,F => Although it is legal to leave out the size for later dimension
 __Q16__: C => Array define a property called _length_. It is not a method like on the StringBuilder class.  
 Q17: F => The ArrayList class defines a method called _length()_.  
 Q18: A,C,D,E  
-__Q19__: B,C => Primitive arrays do not override the equals method. Therefore two arrays with the same content are not equal.
+__Q19__: B,C => Primitive arrays do not override the equals method. Therefore two arrays with the same content are not equal.  
+Q20: D  
+Q21: C  
+Q22: D  
+Q23: A  
+__Q24__: C => There is no asList() method on an array instance. To convert an array to a List, Arrays.asList() has to be used.  
+Q25: D  
+__Q26__: A,B,D => 
