@@ -124,6 +124,8 @@ for ( ; ; ) {
 
 - The dimension of an array is determined by the number of array dimensions on the variable name + the number of array dimensions on the type
 
+## Class Arrays
+
 ### Arrays.equals()
 - Tests only for reference equality
 
@@ -164,6 +166,8 @@ P.137 Converting Between Array and List
 - This behaviour applies also to the varargs notation
   - Arrays.asList("one", "two", "three")
 
+## Class Collections
+
 ## Creating Dates and Times
 
 - The following classes are provided to create dates and times
@@ -185,6 +189,25 @@ P.137 Converting Between Array and List
   - __Calender__ class
 - Bear in mind that months were indexed starting with 0
 - When using the __Local__\* classes and the __Month__ enumeration, months are indexed starting with 1
+
+## Primitve Types and Wrapper Classes
+
+- For every primitive type Java provides a wrapper class
+- The wrapper classes provide methods convert primitive types into objects and the other way around
+
+### Autoboxing and Unboxing
+
+Converting a primitive value (an int, for example) into an object of the corresponding wrapper class (Integer) is called autoboxing. The Java compiler applies autoboxing when a primitive value is:
+
+- Passed as a parameter to a method that expects an object of the corresponding wrapper class.
+- Assigned to a variable of the corresponding wrapper class.
+
+The compiler is surrounding the used primitive variable with a call of a valueOf method. (For example _Integer.valueOf(primitiveIntValue)_)
+
+Converting an object of a wrapper type (Integer) to its corresponding primitive (int) value is called unboxing. The Java compiler applies unboxing when an object of a wrapper class is:
+
+- Passed as a parameter to a method that expects a value of the corresponding primitive type.
+- Assigned to a variable of the corresponding primitive type.
 
 # Chapter 4
 
