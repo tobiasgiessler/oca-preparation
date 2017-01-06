@@ -52,6 +52,17 @@ __Secure__ Java code runs inside the JVM. This creates a sandbox that makes it h
 1. Smaller data types, namely byte, short, and char, are first promoted to int any time they're used with a Java binary arithmetic operator, even if neither of the operands is int.
 1. After all promotion has occured and the operands have the same type, the resulting int value will have the same data type as its promoted operands.
 
+## Compound Operators
+
+When using compound operators one has to bear in mind that even _lossy_ conversions are done.
+
+```Java
+long l = 1L;
+int i = 1;
+i = i + l; // DOES NOT COMPILE (no automatic cast due to possible lossy conversion)
+i += l; // DOES COMPILE (compound operator does even lossy conversions)
+```
+
 ## If Statement
 
 In an if-else-if statement only the first successful condition is executed.
