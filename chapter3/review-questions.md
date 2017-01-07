@@ -25,4 +25,11 @@ Q22: D
 Q23: A  
 __Q24__: C => There is no asList() method on an array instance. To convert an array to a List, Arrays.asList() has to be used.  
 Q25: D  
-__Q26__: A,B,D => 
+__Q26__: A,B,D => Integer.parseInt returns an primitive int value. Integer.valueOf returns an object of class Integer. When unboxing is done, keep in mind that performing unboxing on null reference throws a java.lang.NullPointerException.  
+Q27: B  
+__Q28__: D,F => The enumeration Month is the more modern way of specifying a month. It starts counting by 1. Unlike the pre Java 8 way of specifying months, using the enumeration Calendar.  
+__Q29__: D => The method plusHours does not exist in LocalDate. It exists in LocalDateTime.  
+Q30: F  
+Q31: B  
+__Q32__: E => A DateTimeFormatter.ofLocalizedDateTime can be be applied to an object of class LocalDateTime.  
+Q33: B
