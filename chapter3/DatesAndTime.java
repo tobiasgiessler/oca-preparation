@@ -1,4 +1,5 @@
 import java.time.*;
+import java.time.format.*;
 import java.time.temporal.ChronoUnit;
 
 public class DatesAndTime {
@@ -38,6 +39,42 @@ public class DatesAndTime {
     LocalDateTime calculatedDateTime8 = dateTime1.plus(Duration.ofDays(1));
     LocalDateTime calculatedDateTime9 = dateTime1.plus(Period.ofDays(1));
 
-    // formatting
+    // formatting using predefined formats
+    DateTimeFormatter formatter1 = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+    formatter1.format(date1);
+    date1.format(formatter1);
+    DateTimeFormatter.ISO_DATE.format(date1);
+    date1.format(DateTimeFormatter.ISO_DATE);
+
+    // formatting using self defined patterns
+    DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern(""); // empty patter is valid
+    formatter2.format(date1);
+    // all letters are reserved as pattern letters (escape if it should be included as literal value)
+    DateTimeFormatter formatter3 = DateTimeFormatter.ofPattern("\b");
+    formatter3.format(date1);
+    DateTimeFormatter formatter4 = DateTimeFormatter.ofPattern("yyyy MM dd");
+    formatter4.format(date1);
+
+    // formatting different types (dates, times, date-times)
+    DateTimeFormatter dateFormatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+    DateTimeFormatter timeFormatter = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);
+    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
+
+    // dateFormatter.format(time1); // COMPILES BUT THROWS EXCEPTION (UnsupportedTemporalTypeException)
+
+    // LocalDateTime can be formatter as anything
+    dateTime1.format(dateFormatter);
+    dateTime1.format(timeFormatter);
+    dateTime1.format(dateTimeFormatter);
+
+    // LocalTime can be formatted only as time
+    // time1.format(dateFormatter); // COMPILES BUT THROWS EXCEPTION (UnsupportedTemporalTypeException)
+    time1.format(timeFormatter);
+    // time1.format(dateTimeFormatter); // COMPILES BUT THROWS EXCEPTION (UnsupportedTemporalTypeException)
+
+    // LocalDate can be formatted only as date
+    date1.format(dateFormatter);
+    // date1.format(timeFormatter); // COMPILES BUT THROWS EXCEPTION (UnsupportedTemporalTypeException)
+    // date1.format(dateTimeFormatter); // COMPILES BUT THROWS EXCEPTION (UnsupportedTemporalTypeException)
   }
 }
