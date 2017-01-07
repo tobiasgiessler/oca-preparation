@@ -201,6 +201,23 @@ P.137 Converting Between Array and List
 - Bear in mind that months were indexed starting with 0
 - When using the __Local__\* classes and the __Month__ enumeration, months are indexed starting with 1
 
+## Formatting Dates
+
+- Class DateTimeFormatter is used to format LocalDate, LocalTime, and LocalDateTime
+```Java
+DateTimeFormatter dateFormatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+DateTimeFormatter timeFormatter = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);
+DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
+DateTimeFormatter typeDependsOnPattern = DateTimeFormatter.ofPattern("yyyy MM dd");
+```
+- Local* classes and DateTimeFormatter provide a format method to create a String representation of a date
+```Java
+LocalDate date1 = LocalDate.now();
+DateTimeFormatter formatter1 = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+formatter1.format(date1);
+date1.format(formatter1);
+```
+
 ## Primitve Types and Wrapper Classes
 
 - For every primitive type Java provides a wrapper class
