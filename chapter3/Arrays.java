@@ -35,6 +35,16 @@ public class Arrays {
         int[] numbers = new int[10];
         for (int i = 0; i < numbers.length; i++)
             numbers[i] = i + 5;
+
+        // providing an array as param
+        testMethod1(new int[1]);
+        testMethod1(new int[] {1,2});
+        testMethod1(new int[] {1}, 2);
+        testMethod1(new int[] {1}, 2, 3, 4);
+        testMethod1(new int[] {1}, new int[] {2, 3, 4});
     }
+
+    public static void testMethod1(int[] param1) {};
+    public static void testMethod1(int[] param1, int... param2) {};
 
 }

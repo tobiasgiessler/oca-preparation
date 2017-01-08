@@ -266,6 +266,8 @@ Converting an object of a wrapper type (Integer) to its corresponding primitive 
 
 Static methods can be called directly on the class. They can also be called on object references. Java uses the corresponding class object for the method call. This is the reason why you can even call static method on null references if they have the correct type.
 
+Even though static methods can only be hidden and not overridden, they can be made _final_.
+
 # Chapter 5
 
 ## Constructor Definition Rules:
