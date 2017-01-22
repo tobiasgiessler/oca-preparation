@@ -42,6 +42,11 @@ public class Arrays {
         testMethod1(new int[] {1}, 2);
         testMethod1(new int[] {1}, 2, 3, 4);
         testMethod1(new int[] {1}, new int[] {2, 3, 4});
+
+        // arrays are objects
+        final Object o = new int[] {1,2,3};
+        final int[] arrayObject = (int[]) o;
+        System.out.println(arrayObject[0]);
     }
 
     public static void testMethod1(int[] param1) {};
