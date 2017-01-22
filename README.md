@@ -52,7 +52,40 @@ __Secure__ Java code runs inside the JVM. This creates a sandbox that makes it h
 1. Smaller data types, namely byte, short, and char, are first promoted to int any time they're used with a Java binary arithmetic operator, even if neither of the operands is int.
 1. After all promotion has occured and the operands have the same type, the resulting int value will have the same data type as its promoted operands.
 
-## Compound Operators
+## Operators
+
+Operator Precedence
+
+| Operators                          | Precedence                                  |
+| :-------------                     | :-------------                              |
+| postfix                            | expr++ expr--                               |
+| unary                              | ++expr --expr +expr -expr ~ !               |
+| multiplicative                     | * / %                                       |
+| additive                           | + -                                         |
+| shift                              | << >> >>>                                   |
+| relational                         | < > <= >= instanceof                        |
+| equality                           | == !=                                       |
+| bitwise (or logical) AND           | &                                           |
+| bitwise (or logical) exclusive OR  | &#124;                                      |
+| bitwise (or logical) inclusive OR  | ^                                           |
+| logical AND (short circuit)        | &&                                          |
+| logical OR (short circuit)         | &#124;&#124;                                |
+| ternary                            | ? :                                         |
+| assignment                         | = += -= *= /= %= &= ^= &#124;= <<= >>= >>>= |
+
+### Postfix Operators
+
+The increment/decrement operators can be applied before (prefix) or after (postfix) the operand. The code `result++;` and `++result;` will both end in _result_ being incremented by one. The only difference is that the prefix version (`++result;`) evaluates to the incremented value, whereas the postfix version (`result++;`) evaluates to the original version.
+
+### instanceof
+
+When using the _instanceof_ operator, keep in mind that _null_ is not an instance of anything.
+
+### Bitwise Complement Operator ~
+
+Operator that inverts bits in integral types.
+
+### Compound Operators
 
 When using compound operators one has to bear in mind that even _lossy_ conversions are done.
 
@@ -395,8 +428,6 @@ In an interface all methods that have a method body must use the keyword default
 #### Do switch statements work with all strings?
 
 ## To Do
-- Review questions chapter 1 to 4
-- Insert hand written notes into README file
 - Revisit failed questions
 
 loparco-syntax
