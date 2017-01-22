@@ -145,7 +145,46 @@ for ( ; ; ) {
 
 ## Class String
 
+Strings are immutable!
+
+- char 	charAt(int index)
+- int 	compareTo(String anotherString)
+- int 	compareToIgnoreCase(String str)
+- String 	concat(String str)
+- boolean 	contains(CharSequence s)
+- boolean 	contentEquals(CharSequence cs)
+- boolean 	contentEquals(StringBuffer sb)
+- boolean 	endsWith(String suffix)
+- boolean 	equalsIgnoreCase(String anotherString)
+- int 	indexOf(int ch)
+- boolean 	isEmpty()
+- int 	length()
+- boolean 	matches(String regex)
+- String 	replace(char oldChar, char newChar)
+- String 	replace(CharSequence target, CharSequence replacement)
+- String 	replaceAll(String regex, String replacement)
+- String[] 	split(String regex)
+- String 	substring(int beginIndex, int endIndex)
+
 ## Class StringBuilder
+
+StringBuilders are mutable!
+
+- StringBuilder 	append( <> )
+- int 	capacity()
+- char 	charAt(int index)
+- StringBuilder 	delete(int start, int end)
+- StringBuilder 	deleteCharAt(int index)
+- int 	indexOf(String str, int fromIndex)
+- StringBuilder 	insert(int offset, <>)
+- int 	lastIndexOf(String str, int fromIndex)
+- int 	length()
+- StringBuilder 	replace(int start, int end, String str)
+- StringBuilder 	reverse()
+- void 	setCharAt(int index, char ch)
+- void 	setLength(int newLength)
+- CharSequence 	subSequence(int start, int end)
+- String 	substring(int start, int end)
 
 ### delete(int start, int end)
 
