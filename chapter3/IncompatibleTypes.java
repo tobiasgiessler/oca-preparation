@@ -7,5 +7,8 @@ public class IncompatibleTypes {
     String s2 = new Integer(5).toString();
     // if assignment operator is used, the types must be compatible
     // String s3 = 5; // DOES NOT COMPILE
+    // Even though every object provides a toString() method, an assignment is only successful if the types
+    // are compatible
+    // String i = new Integer(3); // DOES NOT COMPILE
   }
 }

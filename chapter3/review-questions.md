@@ -1,6 +1,6 @@
 # Chapter 3 Review Questions
 
-__Q1__: G => No autoboxing is done when using the assignment operator.  
+__Q1__: G => An int cannot be assigned to a String variable.
 Q2: A,C,D  
 Q3: B,C,E  
 Q4: B  
