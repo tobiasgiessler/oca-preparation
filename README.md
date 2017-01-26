@@ -468,5 +468,10 @@ In an interface all methods that have a method body must use the keyword default
 
 ## To Do
 - Revisit failed questions
+- Write example regarding inheritance and explicit cast
+- Review question 50
+- Write note that in interfaces everything is public by default
+- Write note that static variables must be static in an interface
+- Write note that concatenate null to a string is possible
 
 loparco-syntax
