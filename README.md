@@ -367,7 +367,7 @@ Even though static methods can only be hidden and not overridden, they can be ma
 ## Abstract Class Definition Rules
 1. Abstract classes cannot be instantiated directly.
 1. Abstract classes may be defined with any number, including zero, of abstract and nonabstract methods.
-1. Abstract classes may not be marked as private or final.
+1. Abstract classes may not be marked as final.
 1. An abstract class that extends another abstract class inherits all of its abstract methods as its own abstract methods.
 1. The first concrete class that extends an abstract class must provide an implementation for all of the inherited abstract methods.
 
@@ -380,7 +380,7 @@ Even though static methods can only be hidden and not overridden, they can be ma
 ## Interface Definition Rules
 1. Interfaces cannot be instantiated directly.
 1. An interface is not required to have any methods.
-1. An interface may not be marked as final.
+1. An interface is not allowed to be marked as final.
 1. All top-level interfaces are assumed to have public or default access. Therefore, marking an interface as private, protected, or final will trigger a compiler error, since this is incompatible with these assumptions.
 1. All nondefault methods in an interface are assumed to have the modifiers abstract and public in their definition. Therefore, marking a method as private, protected, or final will trigger compiler errors as these are incompatible with the abstract and public keywords.
 
@@ -476,3 +476,9 @@ In an interface all methods that have a method body must use the keyword default
 - String, StringBuilder method matches
 
 loparco-syntax
+
+## Open Issues
+
+- P. 265 Abstract Class Definition Rules (Rule 3)
+  - _Abstract classes may not be marked as private or final ._
+  - Abstract classes can be marked as final in all places were a normal class can be marked as final
