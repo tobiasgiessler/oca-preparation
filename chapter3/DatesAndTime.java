@@ -62,7 +62,7 @@ public class DatesAndTime {
 
     // dateFormatter.format(time1); // COMPILES BUT THROWS EXCEPTION (UnsupportedTemporalTypeException)
 
-    // LocalDateTime can be formatter as anything
+    // LocalDateTime can be formatted as anything
     dateTime1.format(dateFormatter);
     dateTime1.format(timeFormatter);
     dateTime1.format(dateTimeFormatter);

@@ -3,6 +3,11 @@ public class Operators {
     // modulo (remainder operator)
     System.out.println("7 % 4 = " + 7 % 4);
 
+    // unary + and -
+    int positiveInt = +5; // would be a positive int without the + anyway
+    int negativeInt = -positiveInt;
+    int positiveAgain = -negativeInt;
+
     // postfix (increments value but evaluates to original value)
     int i = 0;
     if (i++ == 0)

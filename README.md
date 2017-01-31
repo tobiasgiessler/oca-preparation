@@ -7,6 +7,8 @@ Some examples and documents to prepare for OCA certification.
 
 Identifiers may contain letters, numbers, $, or \_. Identifiers may not begin with numbers.
 
+Numeric literals may contain underscores between two digits and begin with 1-9, 0, 0x, 0X, 0b, 0B.
+
 ## Order of Elements in a Class
 
 | Element             | Example             | Required       | Where does it go?             |
@@ -147,44 +149,48 @@ for ( ; ; ) {
 
 Strings are immutable!
 
-- char 	charAt(int index)
-- int 	compareTo(String anotherString)
-- int 	compareToIgnoreCase(String str)
-- String 	concat(String str)
-- boolean 	contains(CharSequence s)
-- boolean 	contentEquals(CharSequence cs)
-- boolean 	contentEquals(StringBuffer sb)
-- boolean 	endsWith(String suffix)
-- boolean 	equalsIgnoreCase(String anotherString)
-- int 	indexOf(int ch)
-- boolean 	isEmpty()
-- int 	length()
-- boolean 	matches(String regex)
-- String 	replace(char oldChar, char newChar)
-- String 	replace(CharSequence target, CharSequence replacement)
-- String 	replaceAll(String regex, String replacement)
-- String[] 	split(String regex)
-- String 	substring(int beginIndex, int endIndex)
+- char      charAt(int index)
+- int       compareTo(String anotherString)
+- int       compareToIgnoreCase(String str)
+- String    concat(String str)
+- boolean   contains(CharSequence s)
+- boolean   contentEquals(CharSequence cs)
+- boolean   contentEquals(StringBuffer sb)
+- boolean   endsWith(String suffix)
+- boolean   equalsIgnoreCase(String anotherString)
+- int       indexOf(int ch)
+- boolean   isEmpty()
+- int       length()
+- boolean   matches(String regex)
+- String    replace(char oldChar, char newChar)
+- String    replace(CharSequence target, CharSequence replacement)
+- String    replaceAll(String regex, String replacement)
+- String[]  split(String regex)
+- boolean   startsWith(String prefix)
+- String    substring(int beginIndex, int endIndex)
+- String    toUpperCase()
+- String    toLowerCase()
+- String    trim()
 
 ## Class StringBuilder
 
 StringBuilders are mutable!
 
-- StringBuilder 	append( <> )
-- int 	capacity()
-- char 	charAt(int index)
-- StringBuilder 	delete(int start, int end)
-- StringBuilder 	deleteCharAt(int index)
-- int 	indexOf(String str, int fromIndex)
-- StringBuilder 	insert(int offset, <>)
-- int 	lastIndexOf(String str, int fromIndex)
-- int 	length()
-- StringBuilder 	replace(int start, int end, String str)
-- StringBuilder 	reverse()
-- void 	setCharAt(int index, char ch)
-- void 	setLength(int newLength)
-- CharSequence 	subSequence(int start, int end)
-- String 	substring(int start, int end)
+- StringBuilder   append( <> )
+- int             capacity()
+- char            charAt(int index)
+- StringBuilder   delete(int start, int end)
+- StringBuilder   deleteCharAt(int index)
+- int             indexOf(String str, int fromIndex)
+- StringBuilder   insert(int offset, <>)
+- int             lastIndexOf(String str, int fromIndex)
+- int             length()
+- StringBuilder   replace(int start, int end, String str)
+- StringBuilder   reverse()
+- void            setCharAt(int index, char ch)
+- void            setLength(int newLength)
+- CharSequence    subSequence(int start, int end)
+- String          substring(int start, int end)
 
 ### delete(int start, int end)
 
@@ -251,6 +257,19 @@ P.137 Converting Between Array and List
 
 ## Class Collections
 
+- Collections.sort() - Sorts an ArrayList
+
+## Class ArrayList
+
+- add()
+- clear()
+- contains()
+- equals()
+- isEmpty()
+- remove()
+- set()
+- size()
+
 ## Creating Dates and Times
 
 - The following classes are provided to create dates and times
@@ -264,6 +283,7 @@ P.137 Converting Between Array and List
 - No public constructors are provided
 - Calling a private constructor results in a compilation error
   - Watch out for `new Local...()` on the exam
+- Classes are located in the package `java.time`
 
 ---
 
@@ -293,7 +313,7 @@ date1.format(formatter1);
 ## Primitve Types and Wrapper Classes
 
 - For every primitive type Java provides a wrapper class
-- The wrapper classes provide methods convert primitive types into objects and the other way around
+- The wrapper classes provide methods to convert primitive types into objects and the other way around
 
 ### Autoboxing and Unboxing
 
