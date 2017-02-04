@@ -502,3 +502,17 @@ loparco-syntax
 - P. 265 Abstract Class Definition Rules (Rule 3)
   - _Abstract classes may not be marked as private or final ._
   - Abstract classes can be marked as final in all places were a normal class can be marked as final
+
+## Practice Exam Results
+
+- Exam 1: 52 out of 60
+  - Catch blocks must be reachable to compile
+  - The return type is not part of the method signature
+  - Uppercase letters sort before lowercase letters
+- Exam 2: 44 out of 60
+  - FileNotFoundException is a checked exception
+  - Methods cannot be abstract and final, no class could implement it
+  - Unary operators have affect only for subsequent lines
+  - Type Object has a relation to every reference type
+  - List provides an add method with an index myList.add(0, "value");
+  - finalize method can be protected
