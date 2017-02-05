@@ -516,3 +516,8 @@ loparco-syntax
   - Type Object has a relation to every reference type
   - List provides an add method with an index myList.add(0, "value");
   - finalize method can be protected
+- Exam 3: 45 out of 60
+  - Only declared checked exceptions can be caught
+  - switch can not contain multiple cases with the same values
+  - Watch out for correct case syntax (case 1: System.out.println("bla"); break;)
+  - Generics can be used on just one side of a declaration (List<Integer> l1 = new ArrayList();)
